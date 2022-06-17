@@ -57,4 +57,42 @@ export const SeeMore = styled.span`
     color: white;
     text-transform: uppercase;
     
+`;
+
+export const CopyOverlay = styled.div<{ background: string}>`
+  position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: ${props => props.background};
+    opacity: 1;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+`;
+
+export const CopyMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  opacity: 1;
+  color: white;
+  z-index: 25;
+  
+  
+`;
+
+export const CopyMessageText = styled.h1`
+  font-weight: 400;
+  text-shadow: 1px 2px black;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
 `
