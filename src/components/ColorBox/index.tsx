@@ -21,7 +21,7 @@ export const ColorBox = ({ background, name}: ColorBoxProps) => {
         <Fragment>
             { copied && (
                 <CopyOverlay background={background}>
-                    <CopyMessage copied={copied}>
+                    <CopyMessage>
                         <CopyMessageText>Copied</CopyMessageText>
                     </CopyMessage>
                 </CopyOverlay>)
