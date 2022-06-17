@@ -1,4 +1,7 @@
-import { ColorBoxContainer, CopyContainer, BoxContent, CopyButton, SeeMore} from "./colorbox.style";
+import {Fragment, useState} from "react";
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { ColorBoxContainer, CopyContainer, BoxContent, CopyButton, SeeMore, CopyOverlay, CopyMessage, CopyMessageText} from "./colorbox.style";
+
 
 interface ColorBoxProps {
     background: string;
@@ -6,16 +9,35 @@ interface ColorBoxProps {
 }
 
 export const ColorBox = ({ background, name}: ColorBoxProps) => {
+    const [copied, setCopied] = useState<boolean>(false);
+
+    const UpdateCopyState = () => {
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 1000)
+    }
     return (
-        // div
-        <ColorBoxContainer background={background}>
-            {/* div */}
-            <CopyContainer>
-                {/* span */}
-                <BoxContent>{ name }</BoxContent>
-                <CopyButton id='copy-button'>copy</CopyButton>
-                <SeeMore>More</SeeMore>
-            </CopyContainer>
-        </ColorBoxContainer>
+        <Fragment>
+            { copied && (
+                <CopyOverlay background={background}>
+                    <CopyMessage>
+                        <CopyMessageText>Copied</CopyMessageText>
+                    </CopyMessage>
+                </CopyOverlay>)
+            }
+            <CopyToClipboard text={background} onCopy={ UpdateCopyState }>
+                {/* div */}
+                <ColorBoxContainer background={background}>
+                    {/* div */}
+                    <CopyContainer>
+                        {/* span */}
+                        <BoxContent>{ name }</BoxContent>
+                        <CopyButton id='copy-button'>copy</CopyButton>
+                        <SeeMore>More</SeeMore>
+                    </CopyContainer>
+                </ColorBoxContainer>
+            </CopyToClipboard>
+        </Fragment>
     );
 }
