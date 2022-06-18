@@ -24,7 +24,7 @@ export const Palette = (colorPalette: INewPalette) => {
         // div element using styled component
         <PaletteContainer>
             {/* Header Component */}
-            <Header changeColorLevel={(value: number) => setColorLevel(value)} value={colorLevel}/>
+            <Header changeColorLevel={(value: number| number[]) => setColorLevel(value as number)} value={colorLevel}/>
             {/* div element*/}
             <PaletteColor>
                 { ColorBoxes }
