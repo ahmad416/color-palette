@@ -4,7 +4,7 @@ import '../../../assets/css/slider.css';
 import {Fragment} from "react";
 
 interface ColorSliderProps {
-    changeColorLevel: (value: number) => void;
+    changeColorLevel: (value: number| number[]) => void;
     value: number;
 }
 

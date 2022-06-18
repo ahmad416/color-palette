@@ -3,7 +3,7 @@ import { HeaderStyledComponent, TitleStyledComponent} from "./header.style";
 import { ColorSlider} from "../ColorSlider";
 
 interface HeaderProps {
-    changeColorLevel: (value: number) => void;
+    changeColorLevel: (value: number| number[]) => void;
     value: number
 }
 
