@@ -1,6 +1,16 @@
 import {Fragment, useState} from "react";
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { ColorBoxContainer, CopyContainer, BoxContent, CopyButton, SeeMore, CopyOverlay, CopyMessage, CopyMessageText} from "./colorbox.style";
+import {
+    ColorBoxContainer,
+    CopyContainer,
+    BoxContent,
+    CopyButton,
+    SeeMore,
+    CopyOverlay,
+    CopyMessage,
+    CopyMessageText,
+    CopyColorText
+} from "./colorbox.style";
 
 
 interface ColorBoxProps {
@@ -23,7 +33,9 @@ export const ColorBox = ({ background, name}: ColorBoxProps) => {
                 <CopyOverlay background={background}>
                     <CopyMessage>
                         <CopyMessageText>Copied</CopyMessageText>
+                        <CopyColorText>{ background }</CopyColorText>
                     </CopyMessage>
+
                 </CopyOverlay>)
             }
             <CopyToClipboard text={background} onCopy={ UpdateCopyState }>
