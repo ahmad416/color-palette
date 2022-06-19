@@ -77,14 +77,13 @@ export const CopyMessage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   font-size: 4rem;
   opacity: 1;
   color: white;
   z-index: 25;
-  
-  
 `;
 
 export const CopyMessageText = styled.h1`
@@ -95,4 +94,9 @@ export const CopyMessageText = styled.h1`
   text-align: center;
   padding: 1rem;
   text-transform: uppercase;
+`;
+
+export const CopyColorText = styled.p`
+  font-size: 2rem;
+  font-weight: 100;
 `
