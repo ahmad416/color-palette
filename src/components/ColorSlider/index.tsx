@@ -1,6 +1,6 @@
 import Slider from "rc-slider";
 import 'rc-slider/assets/index.css';
-import '../../../assets/css/slider.css';
+import '../../assets/css/slider.css';
 import {Fragment} from "react";
 
 interface ColorSliderProps {
