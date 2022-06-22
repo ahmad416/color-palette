@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { HeaderStyledComponent, TitleStyledComponent} from "./header.style";
-import { ColorSlider} from "../ColorSlider";
+import { ColorSlider} from "../../../components/ColorSlider";
 import {SelectContainer} from "../../../components/SelectContainer/SelectContainer";
 
 interface HeaderProps {

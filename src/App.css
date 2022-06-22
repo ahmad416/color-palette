@@ -1,0 +1,23 @@
+.app {
+    height: 100vh;
+    display: flex;
+    overflow-x: scroll;
+    align-items: flex-start;
+    justify-content: center;
+    background: #394bad url("/public/bg.77428cd4.svg");
+}
+.inner-section {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.palette-list {
+    width: 100%;
+    display: grid;
+    grid-gap: 2.5rem;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 30%);
+}

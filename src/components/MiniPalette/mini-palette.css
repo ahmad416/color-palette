@@ -1,0 +1,43 @@
+.root {
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.colors {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #dae1e4;
+}
+
+.title {
+    color: black;
+    margin: 0;
+    display: flex;
+    position: relative;
+    font-size: 1rem;
+    align-items: center;
+    padding-top: 0.5rem;
+    justify-content: space-between;
+}
+
+.emoji {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.mini-palette {
+    width: 20%;
+    height: 25%;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto -3.5px;
+}
+
+
